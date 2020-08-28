@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Youtube video list player</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -15,16 +16,89 @@
       <div class="row">
         <div class="col-lg-8">
           <div class="video-play-wrapper" src="ami">
-            <iframe src="https://www.youtube.com/embed/lMBa7gLWyO4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="video-wrapper"></iframe>
+            <iframe src="https://www.youtube.com/embed/a0glBQXOcl4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="video-wrapper"></iframe>
           </div>
         </div>
         <div class="col-lg-4">
-          <ul class="play-list">
-            <li><button type="button" class="btn" data-src="https://www.youtube.com/embed/lMBa7gLWyO4">Video - 1</button></li>
-            <li><button type="button" class="btn" data-src="https://www.youtube.com/embed/htAiPOarIwI">Video - 2</button></li>
-            <li><button type="button" class="btn" data-src="https://www.youtube.com/embed/4ORZ1GmjaMc">Video - 3</button></li>
-            <li><button type="button" class="btn" data-src="https://www.youtube.com/embed/BmKXBVdEV0g">Video - 4</button></li>
-          </ul>
+          <ul id="play-list">
+            <li class="active">
+              <button type="button" class="list-btn" data-src="https://www.youtube.com/embed/a0glBQXOcl4">
+                <img src="images/v1.jpg" alt="image">
+                <span>Video - 1</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="list-btn" data-src="https://www.youtube.com/embed/oluY633rkgI">
+                <img src="images/v2.jpg" alt="image">
+                <span>Video - 2</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="list-btn" data-src="https://www.youtube.com/embed/Y03fZpZK5fY">
+                <img src="images/v3.jpg" alt="image">
+                <span>Video - 3</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="list-btn" data-src="https://www.youtube.com/embed/mU6anWqZJcc">
+                <img src="images/v4.jpg" alt="image">
+                <span>Video - 4</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="list-btn" data-src="https://www.youtube.com/embed/aNu000cQZmU">
+                <img src="images/v5.jpg" alt="image">
+                <span>Video - 5</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="list-btn" data-src="https://www.youtube.com/embed/iLEr67qVHrg">
+                <img src="images/v6.jpg" alt="image">
+                <span>Video - 6</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="list-btn" data-src="https://www.youtube.com/embed/BmKXBVdEV0g">
+                <img src="images/v7.jpg" alt="image">
+                <span>Video - 7</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="list-btn" data-src="https://www.youtube.com/embed/Ib8UBwu3yGA">
+                <img src="images/v8.jpg" alt="image">
+                <span>Video - 8</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="list-btn" data-src="https://www.youtube.com/embed/iogabydg2y0">
+                <img src="images/v9.jpg" alt="image">
+                <span>Video - 9</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="list-btn" data-src="https://www.youtube.com/embed/P5QcZ3CtzGc">
+                <img src="images/v10.jpg" alt="image">
+                <span>Video - 10</span>
+              </button>
+            </li>
+          </ul><!-- play-list end -->
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-lg-6">
+          <h4>Author - <a href="https://github.com/fahaddevs" class="text-primary">Fahad Bin Faiz (fahaddevs)</a></h4>
+          <div class="d-flex flex-wrap align-items-center mt-4">
+            <h5 class="mr-4">Social Links: </h5>
+            <ul class="d-flex social-links">
+              <li><a href="https://github.com/fahaddevs" target="_blank"><i class="fab fa-github-square"></i></a></li>
+              <li><a href="https://codepen.io/fahaddevs" target="_blank"><i class="fab fa-codepen"></i></a></li>
+              <li><a href="https://www.youtube.com/fahaddevs" target="_blank"><i class="fab fa-youtube-square"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/fahaddevs/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+              <li><a href="https://www.instagram.com/fahaddevs/" target="_blank"><i class="fab fa-instagram-square"></i></a></li>
+              <li><a href="https://www.facebook.com/fahaddevs" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
