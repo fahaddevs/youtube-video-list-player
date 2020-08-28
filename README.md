@@ -3,7 +3,7 @@
 - [ ] Version 1.2.1
 
 Just few lines of jQueruy 
-`
+```javascript
   $( ".list-btn" ).each(function() {
     $(this).on('click', function(){
       var dataSrc = $(this).attr("data-src");
@@ -22,6 +22,6 @@ Just few lines of jQueruy
 
     });
   });
-`
+```
 
 [Demo link:](https://fahaddevs.github.io/youtube-video-list-player/)
