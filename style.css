@@ -1,118 +1,108 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-/* font-family: 'Roboto', sans-serif; */
-/* reset css start */
-:root{
-  --heading-font: 'Roboto', sans-serif;
-  --para-font: 'Roboto', sans-serif;
-  --heading-color: #282a2e;
-  --para-color: #282a2e;
-}
-html {
-  scroll-behavior: smooth;
-}
-body {
-  font-size: 15px;
-  font-family: var(--para-font);
-  padding: 0;
-  margin: 0;
-  font-weight: 400;
-}
-h1,h2,h3,h4,h5,h6 {
-  padding: 0;
-  margin: 0;
-}
-h1,h1>a,
-h2,h2>a,
-h3,h3>a,
-h4,h4>a,
-h5,h5>a,
-h6,h6>a {
-  font-family: var(--heading-font);
-  color: var(--heading-color);
-  line-height: 1.25;
-  font-weight: 600;
-  transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  -o-transition: all 0.3s;
-}
-h1>a:hover,
-h2>a:hover,
-h3>a:hover,
-h4>a:hover,
-h5>a:hover,
-h6>a:hover {
-  color: var(--main-color-one);
-}
-h2, h2>a {
-  font-size: 36px;
-}
-h3, h3>a {
-  font-size: 24px;
-}
-h4, h4>a {
-  font-size: 22px;
-}
-h5, h5>a {
-  font-size: 20px;
-}
-a {
-  display: inline-block;
-  font-family: var(--heading-font);
-  font-weight: 400;
-}
-a,a:focus, a:hover {
-  text-decoration: none;
-  color: inherit;
-}
-p, span, li {
-  margin: 0;
-  font-family: var(--para-font);
-  color: var(--para-color);
-  line-height: 1.5;
-  font-size: 16px;
-}
-img {
-  max-width: 100%;
-  height: auto;
-}
-ul, ol {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-button:focus,
-input:focus,
-textarea:focus {
-  outline: none;
-}
-button {
-  border: none;
-  cursor: pointer;
-}
-/* reset css end */
+@import url('reset.css');
+@import url('global.css');
 
-
-/* global css start  */
-.pt-150 {
-  padding-top: 150px;
-}
-.pb-150 {
-  padding-bottom: 150px;
-}
-/* global css end  */
 #video-wrapper {
   width: 100%;
-  height: 450px;
+  height: 415px;
 }
-.play-list {
-  background-color: #dddddd;
+#play-list {
+  background-color: #ffffff;
+  max-height: 415px;
+  overflow-y: scroll;
+  box-shadow: 0 0px 15px rgba(0,0,0,0.2);
+  counter-reset: listCounter;
 }
-.play-list button {
+#play-list button {
   background-color: transparent;
-  padding: 15px 30px;
+  padding: 15px 15px 15px 30px;
 }
-.play-list li + li {
-  border-top: 1px solid #282a2e;
+#play-list li {
+  position: relative;
+}
+#play-list li.active {
+  background-color: #d022222e;
+}
+#play-list li.active::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f04b";
+  color: #ff0000;
+}
+#play-list li + li {
+  border-top: 1px solid #cccccc;
+}
+#play-list li::before {
+  position: absolute;
+  counter-increment: listCounter;
+  content: counter(listCounter);
+  top: 50%;
+  left: 10px;
+  margin-top: -12px;
+}
+#play-list li button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+}
+#play-list li img {
+  width: 80px;
+  position: relative;
+}
+#play-list li img::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+}
+#play-list li span {
+  width: calc(100% - 80px);
+  padding-left: 15px;
+  text-align: left;
+  font-weight: 700;
+}
+
+/*------scroll bar
+if you want to use custom scroll bar using CSS
+ , you must use ID for selecting.... (class selector doesn't work)
+---------------------*/
+
+#play-list::-webkit-scrollbar {
+  width: 5px;
+  height: 7px;
+}
+#play-list::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+#play-list::-webkit-scrollbar-thumb {
+  background: #525965;
+  border: 0px none #ffffff;
+  border-radius: 0px;
+}
+#play-list::-webkit-scrollbar-thumb:hover {
+  background: #525965;
+}
+#play-list::-webkit-scrollbar-thumb:active {
+  background: #525965;
+}
+#play-list::-webkit-scrollbar-track {
+  background: transparent;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+#play-list::-webkit-scrollbar-track:hover {
+  background: transparent;
+}
+#play-list::-webkit-scrollbar-track:active {
+  background: transparent;
+}
+#play-list::-webkit-scrollbar-corner {
+  background: transparent;
 }
