@@ -1,0 +1,15 @@
+/* global css start  */
+.pt-150 {
+  padding-top: 150px;
+}
+.pb-150 {
+  padding-bottom: 150px;
+}
+
+.social-links li + li {
+  margin-left: 20px;
+}
+.social-links li a {
+  font-size: 32px;
+}
+/* global css end  */
