@@ -1,6 +1,6 @@
 # youtube-video-list-player (jQuery version)
 
-- [ ] Version 1.2.1
+:point_right: Version 1.2.1
 
 Just few lines of jQueruy 
 ```javascript
